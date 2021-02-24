@@ -1,80 +1,104 @@
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bree+Serif&family=IBM+Plex+Serif:ital,wght@1,100&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bree+Serif&family=IBM+Plex+Serif:ital,wght@1,100&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 </style>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
 
-  <nav id="navbar">
-    <header>Responsive Web Design Documentation</header><br>
-    <a href="#What`_is_Responsive_WebDesign?" class="nav-link">What is Responsive Web Design?</a>
-    <a href="#Setting_The_Viewport" class="nav-link">Setting The Viewport</a>
-    <a href="#Responsive_Images" class="nav-link">Responsive Images</a>
-    <a href="#Show_Different_Images_Depending_on_Browser_Width" class="nav-link">Show Different Images Depending on Browser Width</a>
-    <a href="#Responsive_Text_Size" class="nav-link">Responsive Text Size</a>
-    <a href="#summary" class="nav-link">Summary</a>
-  </nav>
-
+<nav id="navbar">
+  <header>Responsive Web Design Documentation</header><br>
+  <a href="#What_is_Responsive_Web_Design?" class="nav-link">What is Responsive Web Design?</a>
+  <a href="#Setting_The_Viewport" class="nav-link">Setting The Viewport</a>
+  <a href="#Responsive_Images" class="nav-link">Responsive Images</a>
+  <a href="#Show_Different_Images_Depending_on_Browser_Width" class="nav-link">Show Different Images Depending on
+    Browser Width</a>
+  <a href="#Responsive_Text_Size" class="nav-link">Responsive Text Size</a>
+  <a href="#summary" class="nav-link">Summary</a>
+</nav>
 <!-- Stargting the page here-->
 
 <body id="main">
 
-<main id="main-doc">
-  <header><h1>HTML Responsive Web Design</h1></header>
-  <section class="main-section" id="What`_is_Responsive_WebDesign?">
-   <header><h3>What is Responsive Web Design?</h3> </header>
-    <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones).</p>
-  </section>
-  <section class="main-section"id="Setting_The_Viewport">
-   <header> <h3>Setting The Viewport</h3> </header>
-    <p>To create a responsive website, add the following &lt;meta&gt; tag to all your web pages</p>
-    <h5>Code Example</h5>
-    <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
-    <p>This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.</p>
-  </section>
-  <section class="main-section" id="Responsive_Images">
-  <header> <h3>Responsive Images</h3></header> 
-    <p>Responsive images are images that scale nicely to fit any browser size.</p>
-    <h5>Using the width Property</h5>
-    <p>If the CSS width property is set to 100%, the image will be responsive and scale up and down: </p><h5>Code Example</h5> <code>&lt;img src="img_girl.jpg" style="width:100%;"&gt;</code><p> the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the max-width property instead.If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size.
- </p>
-  </section>
-  <section class="main-section" id="Show_Different_Images_Depending_on_Browser_Width">
-    <header><h3>Show Different Images Depending on Browser Width</h3></header>
-    <p>The HTML <code>&lt;picture&gt;</code> element allows you to define different images for different browser window sizes.Resize the browser window to see how the image below change depending on the width:</p>
-    <h5>Code Example:</h5>
-   <pre><code>&lt;picture&gt;
-  &lt;source srcset="img_smallflower.jpg" media="(max-width: 600px)"&gt;
-  &lt;source srcset="img_flowers.jpg" media="(max-width: 1500px)"&gt;
-  &lt;source srcset="flowers.jpg"&gt;
-  &lt;img src="img_smallflower.jpg" alt="Flowers"&gt;
-&lt;/picture&gt;</code></pre> 
-  </section>
-  <section class="main-section" id="Responsive_Text_Size">
-    <header><h3>Responsive Text Size</h3></header>
-    <p>The text size can be set with a "vw" unit, which means the "viewport width".That way the text size will follow the size of the browser window:</p>
-  
-  <h5>Code Example:</h5>
-  <code>&lt;h1&gt; style="font-size:10vw">Hello World &lt;/h1&gt; </code>
-  <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
-</p>
-  <code>
-    &lt;h1&gt; style="font-size:10vw">Hello World&lt;/h1&gt;
+  <main id="main-doc">
+    <header>
+      <h1>HTML Responsive Web Design</h1>
+    </header>
+    <section class="main-section" id="What_is_Responsive_Web_Design?">
+      <header>
+        <h3>What is Responsive Web Design?</h3>
+      </header>
+      <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website,
+        to make it look good on all devices (desktops, tablets, and phones).</p>
+    </section>
+    <section class="main-section" id="Setting_The_Viewport">
+      <header>
+        <h3>Setting The Viewport</h3>
+      </header>
+      <p>To create a responsive website, add the following &lt;meta&gt; tag to all your web pages</p>
+      <h5>Code Example</h5>
+      <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+      <p>This will set the viewport of your page, which will give the browser instructions on how to control the page's
+        dimensions and scaling.</p>
+    </section>
+    <section class="main-section" id="Responsive_Images">
+      <header>
+        <h3>Responsive Images</h3>
+      </header>
+      <p>Responsive images are images that scale nicely to fit any browser size.</p>
+      <h5>Using the width Property</h5>
+      <p>If the CSS width property is set to 100%, the image will be responsive and scale up and down: </p>
+      <h5>Code Example</h5> <code>&lt;img src="img_girl.jpg" style="width:100%;"&gt;</code>
+      <p> the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to
+        use the max-width property instead.If the max-width property is set to 100%, the image will scale down if it has
+        to, but never scale up to be larger than its original size.
+      </p>
+    </section>
+    <section class="main-section" id="Show_Different_Images_Depending_on_Browser_Width">
+      <header>
+        <h3>Show Different Images Depending on Browser Width</h3>
+      </header>
+      <p>The HTML <code>&lt;picture&gt;</code> element allows you to define different images for different browser
+        window sizes.Resize the browser window to see how the image below change depending on the width:</p>
+      <h5>Code Example:</h5>
+      <pre><code>&lt;picture&gt;
+    &lt;source srcset="img_smallflower.jpg" media="(max-width: 600px)"&gt;
+    &lt;source srcset="img_flowers.jpg" media="(max-width: 1500px)"&gt;
+    &lt;source srcset="flowers.jpg"&gt;
+    &lt;img src="img_smallflower.jpg" alt="Flowers"&gt;
+  &lt;/picture&gt;</code></pre>
+    </section>
+    <section class="main-section" id="Responsive_Text_Size">
+      <header>
+        <h3>Responsive Text Size</h3>
+      </header>
+      <p>The text size can be set with a "vw" unit, which means the "viewport width".That way the text size will follow
+        the size of the browser window:</p>
 
-  </code>
+      <h5>Code Example:</h5>
+      <code>&lt;h1&gt; style="font-size:10vw">Hello World &lt;/h1&gt; </code>
+      <p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+      </p>
+      <code>
+      &lt;h1&gt; style="font-size:10vw">Hello World&lt;/h1&gt;
+  
+    </code>
     </section>
-   <section class="main-section" id="summary">
-    <header><h3>Summary</h3></header>
-    <p>This topic has covered these respective topics regarding to web development</p>
-  <ul class="li">What is Responsive Web Design?</ul>
-  <ul class="li">Setting The Viewport</ul>
-  <ul class="li">Responsive Images</ul>
-  <ul class="li">Show Different Images Depending on Browser Width</ul>
-  <ul class="li">Responsive Images</ul>
+    <section class="main-section" id="summary">
+      <header>
+        <h3>Summary</h3>
+      </header>
+      <p>This topic has covered these respective topics regarding to web development</p>
+      <ul>
+        <li>What is Responsive Web Design?</li>
+        <li>Setting The Viewport</li>
+        <li>Responsive Images</li>
+        <li>Show Different Images Depending on Browser Width</li>
+        <li>Responsive Images</li>
+      </ul>
     </section>
-</main>
+  </main>
 </body>

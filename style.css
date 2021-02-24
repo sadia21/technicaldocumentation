@@ -1,10 +1,28 @@
 
+*{
+  box-sizing: border-box;
+}
+body{
+  display:flex; 
+}
+nav{
+  background-color: #eee;
+ max-width:300px;
+  border-right: 2px solid lightgrey;
+}
+nav a {
+  color: black;
+  border-top: 2px solid lightgrey;
+}
 h1{
-    text-align: center;
-  }
-  #main{  
-   font-family: 'Bree Serif', sans-serif;
-    padding-left: 10px; 
-  }
-    
+  text-align: center;
+}
+#main{  
+ font-family: 'Bree Serif', sans-serif;
+  padding-left: 10px; 
+  padding: 3px;
+}
+section{
+  padding-left:5px;
+}
     
